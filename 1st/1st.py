@@ -56,8 +56,3 @@ print(f"Kembalian        : Rp {kembalian}")
 print("\n" + "=" * 32)
 print(" TERIMA KASIH TELAH BERBELANJA!")
 print("=" * 32)
-
-
-
-
-
