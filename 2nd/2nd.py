@@ -1,14 +1,3 @@
-"kasir cerdas 2.0"
-'''
-n = 1
-while n <= 7:
-    print(f'angka: {n}')
-    n += 1
-else:
-    print("stop"))
-'''
-
-
 def tampilkan_header():
     print("=" * 44)
     print("      SELAMAT DATANG DI TOKO SERBA ADA")
@@ -34,22 +23,22 @@ def hitung_diskon(subtotal):
 
 def tampilkan_struk(semua_nama, semua_harga, semua_jumlah, subtotal, total_diskon, persen_diskon):
     print("\n" + "=" * 44)
-    print("         STRUK PEMBELIAN ANDA")
+    print("          STRUK PEMBELIAN ANDA")
     print("=" * 44)
     print("Detail Belanja:")
 
     for i in range(len(semua_nama)):
         total = semua_harga[i] * semua_jumlah[i]
-        print(f"{i+1}. {semua_nama[i]:17} ({semua_jumlah[i]} x Rp {semua_harga[i]}) = Rp {total}")
+        print(f"{i+1}. {semua_nama[i]:17} ({semua_jumlah[i]} x Rp {semua_harga[i]:,}) = Rp {total:,}")
 
     print("-" * 44)
-    print(f"Subtotal            : Rp {subtotal}")
-    print(f"Diskon ({persen_diskon}%)        : - Rp {total_diskon}")
+    print(f"Subtotal            : Rp {subtotal:,}")
+    print(f"Diskon ({persen_diskon}%)        : - Rp {total_diskon:,}")
     print("-" * 44)
     total_akhir = subtotal - total_diskon
-    print(f"Total yang harus dibayar: Rp {total_akhir}")
+    print(f"Total yang harus dibayar: Rp {total_akhir:,}")
     print("=" * 44)
-    print("     TERIMA KASIH TELAH BERBELANJA!")
+    print("      TERIMA KASIH TELAH BERBELANJA!")
     print("=" * 44)
 
 daftar_nama_barang = []
@@ -58,13 +47,13 @@ daftar_jumlah_barang = []
 
 tampilkan_header()
 
-while True: # ngulang minta input
+while True:
     nama_barang = input("Nama Barang: ")
     if nama_barang.lower() == "selesai":
         break
 
     try:
-        harga = float(input("Harga Satuan: Rp "))
+        harga = int(input("Harga Satuan: Rp "))
         jumlah = int(input("Jumlah: "))
     except ValueError:
         print("Input tidak valid. Coba lagi.\n")
@@ -76,12 +65,12 @@ while True: # ngulang minta input
 
     print("--- Barang berhasil ditambahkan! ---\n")
 
-print("\nMenghitung total belanja Anda...") # subtotal
+print("\nMenghitung total belanja Anda...") 
 subtotal = hitung_subtotal(daftar_harga_barang, daftar_jumlah_barang)
 
-total_diskon, persen_diskon = hitung_diskon(subtotal) # diskon
+total_diskon, persen_diskon = hitung_diskon(subtotal)   
 
-tampilkan_struk( # setruk
+tampilkan_struk( 
     daftar_nama_barang,
     daftar_harga_barang,
     daftar_jumlah_barang,

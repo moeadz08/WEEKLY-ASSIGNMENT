@@ -1,15 +1,15 @@
 SURVEI = [
     {
-    "pertanyaan": "Siapa Tuhanmu?",
-    "opsi": ["Jehovah", "Baphomet", "Poseidon", "Allah"]
+    "pertanyaan": "Siapa minuman favoritmu?",
+    "opsi": ["Kopi", "Teh", "Air Putih"]
     },
     {
-    "pertanyaan": "Apa agamamu?",
-    "opsi": ["Islam", "macOS", "Linux","Windows"]
+    "pertanyaan": "Apa sosmed favoritmu?",
+    "opsi": ["Instagram", "Facebook", "TikTok","X"]
     },
     {
-    "pertanyaan": "Siapa Nabimu?",
-    "opsi": ["Jokowi", "Muhammad", "Ronaldo"]
+    "pertanyaan": "Apa destinasi favoritmu?",
+    "opsi": ["Musium", "Kolam Renang", "Taman Safari"]
     }
 ]
 
